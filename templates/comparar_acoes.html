@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Ações: {{ ticker1.upper() }} - {{ ticker2.upper() }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('relatorio') }}">Gerar</a>
+        <a href="{{ url_for('comparar') }}">Comparar</a>
+        <a href="{{ url_for('encontrar') }}">Encontrar</a>
+    </header>
+    <div id="conteudo" style="color:black">
+        <div class="container centralizar">
+            <h1>Comparação entre {{ ticker1.upper() }} e {{ ticker2.upper() }}</h1>
+            <h2>Resumo Comparativo - {{data_hoje}}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>{{ ticker1.upper() }}</th>
+                        <th>{{ ticker2.upper() }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="font-weight: 600;">
+                        <td>Preço Atual</td>
+                        <td id="preco-ticker1">{{ comparacao['Preço Atual'][ticker1.lower()] }}</td>
+                        <td id="preco-ticker2">{{ comparacao['Preço Atual'][ticker2.lower()] }}</td>
+                    </tr>
+                    <tr>
+                        <td>P/L</td>
+                        <td id="pl-ticker1">{{ comparacao['P/L'][ticker1.lower()] }}</td>
+                        <td id="pl-ticker2">{{ comparacao['P/L'][ticker2.lower()] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Dividend Yield</td>
+                        <td id="dividend-ticker1">{{ comparacao['Dividend Yield'][ticker1.lower()] }}</td>
+                        <td id="dividend-ticker2">{{ comparacao['Dividend Yield'][ticker2.lower()] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Variação ao longo da semana (%)</td>
+                        <td id="variacao-semana-ticker1">{{ comparacao['Variação ao longo da semana (%)'][ticker1.lower()] }}</td>
+                        <td id="variacao-semana-ticker2">{{ comparacao['Variação ao longo da semana (%)'][ticker2.lower()] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Variação ao longo do mês (%)</td>
+                        <td id="variacao-mes-ticker1">{{ comparacao['Variação ao longo do mês (%)'][ticker1.lower()] }}</td>
+                        <td id="variacao-mes-ticker2">{{ comparacao['Variação ao longo do mês (%)'][ticker2.lower()] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Variação ao longo do ano (%)</td>
+                        <td id="variacao-ano-ticker1">{{ comparacao['Variação ao longo do ano (%)'][ticker1.lower()] }}</td>
+                        <td id="variacao-ano-ticker2">{{ comparacao['Variação ao longo do ano (%)'][ticker2.lower()] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer class="centralizar">
+        <h3>Contato</h3><br>
+        <div style="display: flex; flex-direction: row;gap: 5dvw;">
+            <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
+            <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
+            <h4>Email: contato@empresa.com</h4>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

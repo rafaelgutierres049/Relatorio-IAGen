@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Financeiro</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('relatorio') }}">Gerar</a>
+        <a href="{{ url_for('comparar') }}">Comparar</a>
+        <a href="{{ url_for('encontrar') }}">Encontrar</a>
+    </header>
+
+    <div>
+        <div class="container centralizar" style="color:black; justify-content: center; text-align: center; margin-left: 6dvw; margin-right: 6dvw;">
+
+            <h1>Geração de relatório de Ações</h1>
+            
+            <h3>Bem-vindo ao nosso sistema de análise financeira avançada, desenvolvido para oferecer insights detalhados e precisos sobre o mercado de ações. Este sistema foi projetado para atender tanto investidores experientes quanto aqueles que estão começando sua jornada no mundo dos investimentos</h3>
+
+        </div>
+
+        <div class="container centralizar cards">
+            <a href="relatorio" class="card_func centralizar">
+                <h1>Gerar</h1>
+
+                <div class="container centralizar">
+                    <h3>Produzir análises financeiras detalhadas para ações específicas, com base em dados históricos e notícias recentes.</h3>
+                </div>
+            </a>
+
+            <a href="compara" class="card_func centralizar">
+                <h1>Comparar</h1>
+
+                <div class="container centralizar" >
+                    <h3> Analisar ações lado a lado, facilitando a identificação de diferenças e semelhanças em seu desempenho e comportamento no mercado.</h3>
+            
+                </div>
+            </a>
+
+            <a href="encontrar" class="card_func centralizar">
+                <h1>Encontrar</h1>
+                <div class="container centralizar">
+                    
+                    <h3>Analisar o cenário mundial atual e as notícias mais recentes para identificar a melhor ação para investimento à curto, médio e longo prazo.</h3>
+            
+                </div>
+            </a>
+    
+            
+        </div>
+
+
+        <footer class="centralizar">
+            <h3>Contato</h3><br>
+            <div style="display: flex; flex-direction: row;gap: 5dvw;">
+                <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
+                <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
+                <h4>Email: contato@empresa.com</h4>
+            </div>
+        </footer>
+        
+    </div>
+</body>
+</html>

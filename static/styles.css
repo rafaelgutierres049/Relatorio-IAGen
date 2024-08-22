@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;;
+    border-radius: 5px;
+    height: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+body{
+    background-color: #f5f5f7;
+    color: white;
+    font-family: 'Montserrat';
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+
+#cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 3dvw;
+    height: 10dvh;
+    background-color: white;
+    top: 0;
+    z-index: 1000;
+    font-size: 15px;
+}
+#cabecalho a{
+    color: black;
+}
+#cabecalho a:hover{
+    color:#63adfd
+}
+
+#conteudo{
+    padding: 3dvh;
+}
+
+#conteudo form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 2dvh;
+    width: 50%;
+    background-color: white;
+    border-radius: 2dvw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 60%;
+}
+#conteudo form input{
+    width: 60%;
+    border:1px solid rgb(103, 103, 103);
+    border-radius: 2dvw;
+    font-family: 'Montserrat';
+}
+
+#conteudo form button{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: white;
+    background-color: #63adfd;
+    padding: 2dvh;
+    border: 0;
+    border-radius: 2dvw;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#conteudo form button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.container{
+    height: 84dvh;
+    width: auto;
+    margin: 3dvh 3dvh 3dvh 3dvh;
+    animation: fadeIn 3s;
+}
+
+.container_3{
+    height: 84dvh;
+    width: 33%;
+    margin: 3dvh 3dvh 3dvh 3dvh;
+}
+
+.centralizar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    flex-direction: row; gap: 1dvw
+}
+.card_func{
+    width: 30%;
+    height: 80%;
+    background-color: #63adfd;
+    transition: all 0.3s ease;
+    color:white;
+    border-radius:2dvw
+}
+.card_func div{
+    border-radius: 2dvw; background-color: #63adfd; color: white; justify-items: center; text-align: center;
+}
+
+.card_func:hover{
+    transform: scale(1.06);
+}
+
+
+footer{
+    width: 100%;
+    background-color: white;
+    height: 50dvh;
+    color: black;
+    font-size: 15px;
+}
+
+footer h4, h3{
+    font-weight: 500;
+}
+/* Estilização da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+    margin: 20px 0; /* Margem para separar a tabela do conteúdo ao redor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para melhorar a visualização */
+}
+
+th, td {
+    padding: 12px; /* Espaçamento interno das células */
+    text-align: left; /* Alinha o texto à esquerda */
+    border-bottom: 1px solid #ddd; /* Linha de separação entre as linhas */
+}
+
+th {
+    background-color: #f4f4f4; /* Cor de fundo para o cabeçalho */
+    color: #333; /* Cor do texto no cabeçalho */
+    font-weight: bold; /* Negrito para o texto do cabeçalho */
+}
+
+tr {
+    background-color: #f9f9f9; /* Cor de fundo alternada para linhas pares */
+    transition: all 0.3s ease; /* Suaviza a transição de estilos ao passar o mouse */
+}
+
+tr:hover {
+    background-color: #e2e6ea; /* Cor mais neutra para hover, ajustável conforme a paleta de cores */
+    transform: scale(1.02); /* Ajuste o valor de escala conforme o efeito desejado */
+}
+
+.better {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde escuro para texto */
+}
+
+.worse {
+    background-color: #f8d7da; /* Vermelho claro */
+    color: #721c24; /* Vermelho escuro para texto */
+}
+.subtitulo {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.encontrar {
+    background-color: #63adfd;
+    padding:3dvh;
+    color: white;
+    border-radius: 2dvw;
+    transition: 0.3s all ease;
+}
+
+.encontrar:hover{
+    transform: scale(1.05);
+
+}
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container{
+        font-size: 2dvw;
+    }
+    #cabecalho{
+        font-size: 15px;
+    }
+    .card_func{
+        background-color: #63adfd;
+        transition: all 0.3s ease;
+        color:white;
+        border-radius:2dvw;
+        font-size: 12.5px;
+    }
+    .card_func div{
+        border-radius: 2dvw;
+        width: 30%;
+        background-color: #63adfd;
+        color: white;
+        height: 60%;
+        justify-items: center;
+        text-align: center;
+    }
+    .card_func h3{
+        font-size: 13px;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+   
+    .container{
+        font-size: 2.5dvw;
+    }
+    #cabecalho{
+        font-size: 15px;
+    }
+    .cards{
+        flex-direction: column; gap: 1dvw
+    }
+    .card_func{
+        background-color: #63adfd;
+        width:100%;
+        height: 30%;
+        transition: all 0.3s ease;
+        color:white;
+        border-radius:2dvw;
+        font-size: 12.5px;
+    }
+    .card_func div{
+        border-radius: 2dvw;
+        width: 50%;
+        background-color: #63adfd;
+        color: white;
+        height: 60%;
+        justify-items: center;
+        text-align: center;
+    }
+    .card_func h1{
+        font-size: 18px;
+    }
+    .card_func h3{
+        font-size: 12px;
+    }
+    footer{
+        font-size: 10px;
+    }
+}

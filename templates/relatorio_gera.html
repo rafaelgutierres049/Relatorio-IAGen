@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Financeiro - {{ ticker.upper() }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('relatorio') }}">Gerar</a>
+        <a href="{{ url_for('comparar') }}">Comparar</a>
+        <a href="{{ url_for('encontrar') }}">Encontrar</a>
+    </header>
+    
+    <div id="conteudo" style="color:black">
+        <h1>Relatório de {{ ticker.upper() }}</h1>
+
+        <div class="conteudo centralizar">
+            <h2>Informações Gerais</h2>
+            <p id="relatorio-texto" style="margin-left: 3dvw; margin-right: 3dvw;font-weight: 500;">{{ relatorio }}</p>
+        </div>
+
+        <div class="conteudo centralizar" style="width:100%; height: 80dvh;">
+            <h2>Gráfico de Fechamento Anual</h2>
+            <img src="data:image/png;base64,{{ grafico_fechamento_ano_url }}" alt="Gráfico de Fechamento Anual" width="60%" height="80%">
+        </div>
+
+        <div class="conteudo centralizar" style="width:100%; height: 80dvh;">
+            <h2>Gráfico de Preço no último mês</h2>
+            <img src="data:image/png;base64,{{ grafico_preco_url }}" alt="Gráfico de Preço" width="60%" height="80%">
+        </div>
+    </div>
+    <footer class="centralizar">
+        <h3>Contato</h3><br>
+        <div style="display: flex; flex-direction: row;gap: 5dvw;">
+            <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
+            <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
+            <h4>Email: contato@empresa.com</h4>
+        </div>
+    </footer>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Função para formatar o relatório
+    function formatRelatorio() {
+        var relatorioElement = document.getElementById('relatorio-texto');
+        var relatorioHTML = relatorioElement.innerHTML;
+        
+        // Substituir "**" por quebras de linha
+        relatorioHTML = relatorioHTML.replace(/\*\*/g, '<br><br>');
+        
+        // Adicionar classe 'subtitulo' aos títulos
+        relatorioHTML = relatorioHTML.replace(/(Introdução|Análise de Impacto das Notícias|Resumo Diário|Análise Semanal|Recomendações|Previsões de Mercado|Análise Comparativa|Conclusão)/g, '<span class="subtitulo">$1</span>');
+        
+        // Atualizar o conteúdo do parágrafo
+        relatorioElement.innerHTML = relatorioHTML;
+    }
+
+    // Chamar a função para formatar o relatório
+    formatRelatorio();
+    });
+</script>
+</html>

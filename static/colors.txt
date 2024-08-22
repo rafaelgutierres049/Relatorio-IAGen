@@ -1,0 +1,3 @@
+rgba(1, 74, 0, 0.65) - verde escuro
+
+#6B8E23 - verde + claro
