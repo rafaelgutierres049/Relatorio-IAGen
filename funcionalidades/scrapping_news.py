@@ -143,4 +143,3 @@ def obter_noticias():
             resultado.append(text)
 
     return resultado
-
