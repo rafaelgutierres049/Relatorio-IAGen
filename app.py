@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
-import dados.stocks_data as sd
+import funcionalidades.stocks_data as sd
 import chat_integration.chat_integration as ci
-import dados.scrapping_news as sn
+import funcionalidades.news_data as nd
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def relatorio():
 def relatorio_gera():
     ticker = request.args.get('ticker')
     if ticker:
-        noticias = sn.obter_noticias()
+        noticias = nd.obter_noticias()
         info_acao = sd.obter_info(ticker)
         relatorio, grafico_fechamento_ano_base64, grafico_preco_base64 = ci.gerar_relatorio(ticker, noticias, info_acao)
 
@@ -59,7 +59,7 @@ def encontrar():
 @app.route('/encontrar/acoes')
 def encontrar_acoes():
     acoes = sd.todas_acoes()
-    noticias = sn.obter_noticias()
+    noticias = nd.obter_noticias()
 
     if acoes and noticias:
         encontrado = ci.verificar_melhor(acoes, noticias) 
