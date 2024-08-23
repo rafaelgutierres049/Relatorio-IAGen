@@ -1,4 +1,4 @@
-from funcionalidades.senha import OPENAI_API_KEY
+from chat_integration.senha import OPENAI_API_KEY
 import requests
 import funcionalidades.graficos as graficos 
 import io

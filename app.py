@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
-import funcionalidades.stocks_data as sd
-import funcionalidades.chat_integration as ci
-import funcionalidades.scrapping_news as sn
+import dados.stocks_data as sd
+import chat_integration.chat_integration as ci
+import dados.scrapping_news as sn
 from datetime import datetime, timedelta
 
 app = Flask(__name__)

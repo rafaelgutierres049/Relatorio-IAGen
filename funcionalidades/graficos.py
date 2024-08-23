@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import funcionalidades.stocks_data as sd
+import dados.stocks_data as sd
 
 def fechamento_ano(ticker):
     dados_acao = sd.obter_historico_ano(ticker)
