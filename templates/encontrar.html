@@ -15,12 +15,14 @@
     </header>
     <div class="conteudo">
         <div id="div_encontrar" class="container centralizar">
-            <a class="encontrar" href="{{ url_for('encontrar_acoes') }}"><h2>Verificar as melhores ações no momento</h2></a>
-            <div id="spinner"></div>
+            <a id="btn_encontrar" class="encontrar" href="{{ url_for('encontrar_acoes') }}">
+                <h2>Verificar as melhores ações no momento</h2>
+            </a>
+            <div id="spinner" style="display: none;"> <!-- Spinner aqui --> </div>
+            <div id="mensagem" style="display: none; color: black;">Em torno de 1 minuto seu relatório estará completo!</div>
         </div>
     </div>
     
-
     <footer class="centralizar">
         <h3>Contato</h3><br>
         <div style="display: flex; flex-direction: row;gap: 5dvw;">
@@ -30,12 +32,16 @@
         </div>
     </footer>
         
-    </div>
-</body>
 <script>
-    document.getElementById('div_encontrar').onclick = function() {
-        // Exibe o overlay e o spinner ao enviar o formulário
-        document.getElementById('spinner').style.display = 'block';
-    };
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('btn_encontrar').addEventListener('click', function(event) {
+            // Exibe o spinner e a mensagem
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('mensagem').style.display = 'block';
+
+            // Permite que o link continue sua navegação normalmente após exibir a mensagem
+        });
+    });
 </script>
+</body>
 </html>

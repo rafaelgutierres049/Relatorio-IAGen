@@ -25,6 +25,7 @@
                     </div>
                     <div style="height: 20%;width: 100%;">
                         <div id="spinner"></div>
+                        <div id="mensagem" style="display: none; color: black;">Em torno de 1 minuto seu relatório estará completo!</div>
                     </div>
                 </div>
                 
@@ -47,6 +48,8 @@
     document.getElementById('compararForm').onsubmit = function() {
         // Exibe o overlay e o spinner ao enviar o formulário
         document.getElementById('spinner').style.display = 'block';
+        document.getElementById('mensagem').style.display = 'block';
+
     };
 </script>
 </html>
