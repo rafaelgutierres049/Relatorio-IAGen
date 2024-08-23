@@ -14,8 +14,9 @@
         <a href="{{ url_for('encontrar') }}">Encontrar</a>
     </header>
     <div class="conteudo">
-        <div class="container centralizar">
+        <div id="div_encontrar" class="container centralizar">
             <a class="encontrar" href="{{ url_for('encontrar_acoes') }}"><h2>Verificar as melhores ações no momento</h2></a>
+            <div id="spinner"></div>
         </div>
     </div>
     
@@ -31,4 +32,10 @@
         
     </div>
 </body>
+<script>
+    document.getElementById('div_encontrar').onclick = function() {
+        // Exibe o overlay e o spinner ao enviar o formulário
+        document.getElementById('spinner').style.display = 'block';
+    };
+</script>
 </html>

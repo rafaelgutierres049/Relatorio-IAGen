@@ -16,13 +16,23 @@
     <div id="conteudo" style="color:black">
         <div class="container centralizar">
             <h1>Geração de relatório</h1>
-            <form action="{{ url_for('relatorio') }}" method="post">
-                <label for="ticker">Digite o Ticker da Ação:</label>
-                <input type="text" id="ticker" name="ticker" required>
-                <button type="submit">Gerar Relatório</button>
+            <form id="compararForm" action="{{ url_for('relatorio') }}" method="post">
+                <div style="width: 100%; height: 100%;">
+                    <div class="centralizar" style="width: 100%; height: 80%;gap:2dvh">
+                        <label for="ticker">Digite o Ticker da Ação:</label>
+                        <input type="text" id="ticker" name="ticker" required>
+                        <button type="submit">Gerar Relatório</button>
+                    </div>
+                    <div style="height: 20%;width: 100%;">
+                        <div id="spinner"></div>
+                    </div>
+                </div>
+                
             </form>
         </div>
     </div>
+    <div id="overlay"></div>
+    <div id="spinner"></div>
     <footer class="centralizar">
         <h3>Contato</h3><br>
         <div style="display: flex; flex-direction: row;gap: 5dvw;">
@@ -33,4 +43,10 @@
     </footer>
 
 </body>
+<script>
+    document.getElementById('compararForm').onsubmit = function() {
+        // Exibe o overlay e o spinner ao enviar o formulário
+        document.getElementById('spinner').style.display = 'block';
+    };
+</script>
 </html>

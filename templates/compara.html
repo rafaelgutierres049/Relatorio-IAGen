@@ -16,14 +16,23 @@
     <div id="conteudo">
         <div class="container centralizar" style="color:black">
             <h1>Comparar Ações</h1>
-            <form action="{{ url_for('comparar') }}" method="post" style="height:70%">
-                <label for="ticker1">Ticker da Ação 1:</label>
-                <input type="text" id="ticker1" name="ticker1" required>
+            
+            <form id="compararForm" action="{{ url_for('comparar') }}" method="post" style="height:70%">
+                <div style="width: 100%; height: 100%;">
+                    <div class="centralizar" style="width: 100%; height: 80%;gap:2dvh">
+                        <label for="ticker1">Ticker da Ação 1:</label>
+                        <input type="text" id="ticker1" name="ticker1" required>
 
-                <label for="ticker2">Ticker da Ação 2:</label>
-                <input type="text" id="ticker2" name="ticker2" required>
+                        <label for="ticker2">Ticker da Ação 2:</label>
+                        <input type="text" id="ticker2" name="ticker2" required>
 
-                <button type="submit">Comparar</button>
+                        <button type="submit">Comparar</button>
+                        <!-- Spinner posicionado abaixo do botão de enviar -->
+                    </div>
+                    <div style="height: 20%;width: 100%;">
+                        <div id="spinner"></div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -36,4 +45,10 @@
         </div>
     </footer>
 </body>
+<script>
+    document.getElementById('compararForm').onsubmit = function() {
+        // Exibe o spinner ao enviar o formulário
+        document.getElementById('spinner').style.display = 'block';
+    };
+</script>
 </html>
