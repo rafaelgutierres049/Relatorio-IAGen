@@ -1,1 +1,1 @@
-OPENAI_API_KEY = "sua-senha"
+#OPENAI_API_KEY = ""
