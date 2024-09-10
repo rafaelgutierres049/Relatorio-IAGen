@@ -15,7 +15,7 @@
     </header>
     
     <div id="conteudo" style="color:black">
-        <h1>Relatório de {{ ticker.upper() }}</h1>
+        <h1>Relatório - {{ ticker.upper() }}</h1>
 
         <div class="conteudo centralizar">
             <h2>Informações Gerais</h2>
@@ -53,7 +53,7 @@
         relatorioHTML = relatorioHTML.replace(/\*\*/g, '<br><br>');
         
         // Adicionar classe 'subtitulo' aos títulos
-        relatorioHTML = relatorioHTML.replace(/(Introdução|Análise de Impacto das Notícias|Resumo Diário|Análise Semanal|Recomendações|Previsões de Mercado|Análise Comparativa|Conclusão)/g, '<span class="subtitulo">$1</span>');
+        relatorioHTML = relatorioHTML.replace(/(Introdução|Análise de Impacto das Notícias|Resumo Diário|Análise Semanal|Recomendações|Previsões de Mercado|Análise Comparativa|Conclusão)/g, '<div style="background-color:#63adfd;color:white; width:100%; text-align:center; border-radius:25px;"><span class="subtitulo">$1</span></div>');
         
         // Atualizar o conteúdo do parágrafo
         relatorioElement.innerHTML = relatorioHTML;

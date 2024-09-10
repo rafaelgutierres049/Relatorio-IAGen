@@ -81,13 +81,14 @@ def verificar_melhor(acoes, noticias):
     f"Ações em Análise: {acoes}"
     f"Principais Notícias: {noticias}"
     "Por favor, organize o relatório da seguinte forma"
-    " **Impacto das Notícias no Mercado** Analise as manchetes das notícias fornecidas e identifique possíveis impactos significativos no mercado em geral e nas ações listadas. Considere o contexto econômico e geopolítico para prever como esses eventos podem influenciar os preços das ações a curto, médio e longo prazo."
-    " **Recomendações Personalizadas por Perfil de Investimento**"
-    "Curto Prazo: Identifique as ações mais voláteis ou aquelas que podem se beneficiar de movimentos rápidos devido a notícias recentes. Forneça recomendações de compra, venda ou manutenção para esse perfil."
-    "Médio Prazo: Selecione as ações que apresentam um bom equilíbrio entre risco e retorno, considerando o impacto potencial das notícias e as tendências do mercado. Sugira estratégias de investimento adequadas para investidores de médio prazo."
-    "Longo Prazo: Indique as ações com fundamentos sólidos e que, apesar de possíveis flutuações no curto prazo, têm boas perspectivas de crescimento sustentado no longo prazo. Faça recomendações de investimento para esse perfil."
-    " **Previsões de Mercado** Baseando-se em dados históricos, nas notícias recentes e nas tendências atuais, faça previsões sobre os possíveis movimentos futuros das ações selecionadas para cada perfil de investimento. Proponha ações estratégicas que o investidor pode tomar em resposta a essas previsões."
-    " **Análise Comparativa** Compare a ação que se destaca em cada perfil (curto, médio, longo prazo) em relação às outras, usando métricas financeiras e as notícias recentes. Forneça uma visão geral de por que essa ação é a melhor escolha em seu respectivo perfil e como ela se posiciona frente ao cenário atual do mercado."
+    "*Impacto das Notícias no Mercado* "
+    "Analise as manchetes das notícias fornecidas e identifique possíveis impactos significativos no mercado em geral e nas ações listadas. Considere o contexto econômico e geopolítico para prever como esses eventos podem influenciar os preços das ações a curto, médio e longo prazo."
+    "*Recomendações Personalizadas por Perfil de Investimento*"
+    "#Curto Prazo:# Com base nas notícias recentes que foram fornecidas, identifique as ações mais voláteis ou aquelas que podem se beneficiar de movimentos rápidos devido a esses eventos. Analise o impacto das notícias e forneça recomendações claras de compra, venda ou manutenção para esse perfil de investimento."    
+    "#Médio Prazo:# Com base nas notícias recentes que foram fornecidas, selecione as ações que apresentam um bom equilíbrio entre risco e retorno, considerando o impacto potencial das notícias e as tendências do mercado e explique o porquê dessas escolhas. Sugira estratégias de investimento adequadas para investidores de médio prazo."
+    "#Longo Prazo:# Com base nas notícias recentes que foram fornecidas, indique as ações com fundamentos sólidos e que, apesar de possíveis flutuações no curto prazo, têm boas perspectivas de crescimento sustentado no longo prazo e explique o porquê dessas escolhas. Faça recomendações de investimento para esse perfil."
+    "*Previsões de Mercado* Baseando-se em dados históricos, nas notícias recentes e nas tendências atuais, faça previsões sobre os possíveis movimentos futuros das ações selecionadas para cada perfil de investimento(#Curto Prazo:#, #Médio Prazo:#, #Longo Prazo:#). Proponha ações estratégicas que o investidor pode tomar em resposta a essas previsões."
+    "*Análise Comparativa* Compare as ações selecionadas com as outras empresas do mesmo setor e mostre o porque elas se sobressaem em sua análise (#Curto Prazo:#,#Médio Prazo:#,#Longo Prazo:#) em relação às outras do mesmo setor, usando métricas financeiras e as notícias recentes. Forneça uma visão geral de por que essa ação é a melhor escolha em seu respectivo perfil e como ela se posiciona frente ao cenário atual do mercado."
     )
     # Criando o corpo da requisição
     data = {

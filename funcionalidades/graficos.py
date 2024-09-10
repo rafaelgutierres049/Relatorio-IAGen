@@ -9,7 +9,7 @@ def fechamento_ano(ticker):
     # Criando a figura e os eixos do gráfico
     fig, ax = plt.subplots(figsize=(12, 6))
     ax.plot(dados_acao.index, dados_acao['Close'], label='Preço de Fechamento')
-    ax.set_title(f'Histórico de Preços de Fechamento - {ticker.upper()}')
+    ax.set_title(f'Histórico de Preços no último ano - {ticker.upper()}')
     ax.set_xlabel('Data')
     ax.set_ylabel('Preço de Fechamento (R$)')
     ax.legend()
