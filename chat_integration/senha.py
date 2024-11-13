@@ -1,1 +1,1 @@
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "sua-senha"
