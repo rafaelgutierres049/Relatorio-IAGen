@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório Financeiro</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    
 </head>
 <body>
     <header id="cabecalho">
@@ -13,35 +14,62 @@
         <a href="{{ url_for('comparar') }}">Comparar</a>
         <a href="{{ url_for('encontrar') }}">Encontrar</a>
     </header>
-    <div class="conteudo">
-        <div id="div_encontrar" class="container centralizar">
-            <a id="btn_encontrar" class="encontrar" href="{{ url_for('encontrar_acoes') }}">
-                <h2>Verificar as melhores ações no momento</h2>
-            </a>
-            <div id="spinner" style="display: none;"> <!-- Spinner aqui --> </div>
-            <div id="mensagem" style="display: none; color: black;">Em torno de 1 minuto seu relatório estará completo!</div>
+    <div class="fundo" style="background-color: beige;">
+        <div class="conteudo">
+            <div class="container centralizar">
+                <div class="centralizar" style="text-align: center; margin-top: 10px; height: 40%;width: 90%;">
+                    <h2>RECOMENDAÇÃO DIÁRIA</h2>
+                    <h3>
+                        Para identificar as melhores oportunidades de investimento no mercado de ações é necessária a analise do cenário mundial atual e das notícias mais recentes, considerando múltiplos fatores como: mudanças políticas, econômicas, tecnológicas e sociais. Acompanhe essas variáveis em tempo real, antecipe tendências, minimize riscos e aproveite oscilações de curto prazo ou foque no crescimento sustentável de empresas para investimentos a médio e longo prazo.
+                    </h3>
+                </div>
+                <br><br>
+                <div>
+                        
+                            <form id="compararForm" action="{{ url_for('comparar') }}" method="post">
+                                <div class="centralizar">
+                                    <a id="btn_encontrar" class="encontrar" href="{{ url_for('encontrar_acoes') }}" style="color: black; font-weight: 600;">
+                                        GERAR RELATÓRIO
+                                    </a>
+                                </div>
+                            </form>
+                            <div id="spinner" style="visibility: hidden"></div>
+
+                            
+                    
+                </div>
+            </div>
+            
         </div>
     </div>
     
+    
     <footer class="centralizar">
-        <h3>Contato</h3><br>
-        <div style="display: flex; flex-direction: row;gap: 5dvw;">
-            <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
-            <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
-            <h4>Email: contato@empresa.com</h4>
+        <br>
+        <div style="display: flex; flex-direction: row; gap: 5dvw; text-align: center;">
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Endereço:</span><br> Rua Exemplo, 123, Cidade, País</h4>
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Telefone:</span><br> +55 (XX) XXXX-XXXX</h4>
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">E-mail:</span><br> contato@empresa.com</h4>
         </div>
+        <br>
     </footer>
         
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('btn_encontrar').addEventListener('click', function(event) {
             // Exibe o spinner e a mensagem
-            document.getElementById('spinner').style.display = 'block';
-            document.getElementById('mensagem').style.display = 'block';
+            document.getElementById('spinner').style.visibility = 'visible';
+            document.getElementById('mensagem').style.visibility = 'visible';
 
             // Permite que o link continue sua navegação normalmente após exibir a mensagem
         });
     });
+
 </script>
 </body>
 </html>
+
+
+
+
+<!--  -->

@@ -3,6 +3,7 @@ import funcionalidades.stocks_data as sd
 import chat_integration.chat_integration as ci
 import funcionalidades.news_data as nd
 from datetime import datetime, timedelta
+import asyncio  # Importando asyncio
 
 app = Flask(__name__)
 
@@ -18,12 +19,12 @@ def relatorio():
     return render_template('relatorio.html')
 
 @app.route('/relatorio/gera')
-def relatorio_gera():
+async def relatorio_gera():  # Tornando a função assíncrona
     ticker = request.args.get('ticker')
     if ticker:
-        noticias = nd.obter_noticias()
-        info_acao = sd.obter_info(ticker)
-        relatorio, grafico_fechamento_ano_base64, grafico_preco_base64 = ci.gerar_relatorio(ticker, noticias, info_acao)
+        noticias = await nd.obter_noticias()  # Usando await para funções assíncronas
+        info_acao = sd.obter_info(ticker)  
+        relatorio, grafico_fechamento_ano_base64, grafico_preco_base64 = await ci.gerar_relatorio(ticker, noticias, info_acao)  # Usando await
 
         return render_template('relatorio_gera.html', ticker=ticker, relatorio=relatorio, 
                                grafico_fechamento_ano_url=grafico_fechamento_ano_base64, 
@@ -57,12 +58,12 @@ def encontrar():
     return render_template('encontrar.html')
 
 @app.route('/encontrar/acoes')
-def encontrar_acoes():
-    acoes = sd.todas_acoes()
-    noticias = nd.obter_noticias()
+async def encontrar_acoes():  # Tornando a função assíncrona
+    acoes = sd.todas_acoes()  # Usando await para funções assíncronas
+    noticias = await nd.obter_noticias()  # Usando await para funções assíncronas
 
     if acoes and noticias:
-        encontrado = ci.verificar_melhor(acoes, noticias) 
+        encontrado = ci.verificar_melhor(acoes, noticias)  # Usando await para funções assíncronas
         return render_template('encontrar_acoes.html', encontrado=encontrado)
     return render_template('encontrar_acoes.html')
 

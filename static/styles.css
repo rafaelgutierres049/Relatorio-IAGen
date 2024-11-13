@@ -14,17 +14,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: black;;
+    background-color: #63adfd;
     border-radius: 5px;
     height: auto;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: black;
 }
 
 body{
-    background-color: #f5f5f7;
+    background-color: black;
     color: white;
     font-family: 'Montserrat';
     margin: auto;
@@ -41,13 +41,13 @@ a{
     font-weight: 500;
     gap: 3dvw;
     height: 10dvh;
-    background-color: white;
+    background-color: black;
     top: 0;
     z-index: 1000;
     font-size: 15px;
 }
 #cabecalho a{
-    color: black;
+    color: white;
 }
 #cabecalho a:hover{
     color:#63adfd
@@ -65,7 +65,7 @@ a{
     font-weight: 500;
     gap: 2dvh;
     width: 50%;
-    background-color: white;
+    background-color: black;
     border-radius: 2dvw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -81,7 +81,7 @@ a{
 #conteudo form button{
     font-family: 'Montserrat';
     font-weight: 500;
-    color: white;
+    color: black;
     background-color: #63adfd;
     padding: 2dvh;
     border: 0;
@@ -119,14 +119,15 @@ a{
 }
 .card_func{
     width: 30%;
-    height: 80%;
-    background-color: #63adfd;
+    height: 50%;
+    background-color: rgb(55, 55, 55);
     transition: all 0.3s ease;
     color:white;
-    border-radius:2dvw
+    border-radius:2dvw;
+    padding: 10px;
 }
 .card_func div{
-    border-radius: 2dvw; background-color: #63adfd; color: white; justify-items: center; text-align: center;
+    border-radius: 2dvw; color: white; justify-items: center; text-align: center;
 }
 
 .card_func:hover{
@@ -136,9 +137,8 @@ a{
 
 footer{
     width: 100%;
-    background-color: white;
-    height: 50dvh;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 15px;
 }
 
@@ -160,14 +160,15 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4; /* Cor de fundo para o cabeçalho */
+    background-color: #63adfd; /* Cor de fundo para o cabeçalho */
     color: #333; /* Cor do texto no cabeçalho */
     font-weight: bold; /* Negrito para o texto do cabeçalho */
 }
 
 tr {
-    background-color: #f9f9f9; /* Cor de fundo alternada para linhas pares */
+    background-color: white; /* Cor de fundo alternada para linhas pares */
     transition: all 0.3s ease; /* Suaviza a transição de estilos ao passar o mouse */
+    color: black;
 }
 
 tr:hover {
@@ -204,18 +205,40 @@ tr:hover {
 }
 /* Estilos do spinner */
 #spinner {
-    display: none;
-    border: 4px solid #cccccc;
-    border-top: 4px solid #3498db;
+    visibility: hidden;
+    border: 5px solid white;
+    border-top: 5px solid #63adfd;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     animation: spin 2s linear infinite;
-
-    /* Posição relativa dentro do formulário */
     margin: 20px auto;
     position: relative;
 }
+.caixa_form{
+    transition: all .3s ease-in;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    background-color: black;
+}
+.caixa_form:hover{
+    transform: scale(1.05);
+}
+.fundo{
+    background: linear-gradient(to bottom, black 1%, beige 95%);
+    width: 100%;
+}
+.font_encontrar{
+    font-size: 15px;
+}
+.seta{
+    height: 3rem; width: 3rem; margin-bottom: -100px;transition: all .3s ease;
+}
+.seta:hover{
+    transform: scale(1.25);
+}
+
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -252,6 +275,9 @@ tr:hover {
     footer{
         font-size: 12px;
     }
+    .font_encontrar{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -263,10 +289,11 @@ tr:hover {
         font-size: 15px;
     }
     .cards{
-        flex-direction: column; gap: 1dvw
+        flex-direction: column;
+        gap: 1dvw
     }
     .card_func{
-        background-color: #63adfd;
+        background-color: black;
         width:100%;
         height: 30%;
         transition: all 0.3s ease;
@@ -277,7 +304,7 @@ tr:hover {
     .card_func div{
         border-radius: 2dvw;
         width: 50%;
-        background-color: #63adfd;
+        background-color: black;
         color: white;
         height: 60%;
         justify-items: center;
@@ -292,4 +319,16 @@ tr:hover {
     footer{
         font-size: 10px;
     }
+    form{
+        font-size: 10px;
+        height: 2dvh;
+        width: 2vh;
+    }
+    .caixa_form{
+        font-size: 10px;
+    }
+    .font_encontrar{
+        font-size: 10px;
+    }
+    
 }

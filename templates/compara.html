@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparação de Ações</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .fundo_rel {
+            position: relative;
+            background-image: url(../static/imagens/comparacao.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+        }
+
+        .fundo_rel::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%); /* Gradiente de preto para transparente */
+            z-index: 1; /* Coloca o overlay acima da imagem, mas abaixo do conteúdo */
+        }
+        
+        .caixa_form{
+            transition: all .3s ease-in;
+        }
+        .caixa_form:hover{
+            transform: scale(1.05);
+        }
+        
+    </style>
 </head>
 <body>
     <header id="cabecalho">
@@ -13,42 +44,44 @@
         <a href="{{ url_for('comparar') }}">Comparar</a>
         <a href="{{ url_for('encontrar') }}">Encontrar</a>
     </header>
-    <div id="conteudo">
-        <div class="container centralizar" style="color:black">
-            <h1>Comparar Ações</h1>
+    <div class="fundo_rel">
+        <div id="conteudo">
+        
+            <div class="container centralizar" style="position: relative; z-index: 2;">
             
-            <form id="compararForm" action="{{ url_for('comparar') }}" method="post" style="height:70%">
-                <div style="width: 100%; height: 100%;">
-                    <div class="centralizar" style="width: 100%; height: 80%;gap:2dvh">
-                        <label for="ticker1">Ticker da Ação 1:</label>
-                        <input type="text" id="ticker1" name="ticker1" required>
-
-                        <label for="ticker2">Ticker da Ação 2:</label>
-                        <input type="text" id="ticker2" name="ticker2" required>
-
-                        <button type="submit">Comparar</button>
-                        <!-- Spinner posicionado abaixo do botão de enviar -->
+                <form class="caixa_form" id="compararForm" action="{{ url_for('comparar') }}" method="post" style="height: 72%;">
+                    
+                    <div class="centralizar" style="width: 100%; height: 100%;gap: 1rem;padding: 1rem;">
+                        <h2>Comparar Ações</h2>
+                            <label for="ticker1">Ticker da Ação 1:</label>
+                            <input type="text" id="ticker1" name="ticker1" required>
+    
+                            <label for="ticker2">Ticker da Ação 2:</label>
+                            <input type="text" id="ticker2" name="ticker2" required>
+    
+                            <button type="submit">Comparar</button>
+                            <!-- Spinner posicionado abaixo do botão de enviar -->
+                            <div id="spinner"></div>
                     </div>
-                    <div style="height: 20%;width: 100%;">
-                        <div id="spinner"></div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
+        
     </div>
     <footer class="centralizar">
-        <h3>Contato</h3><br>
-        <div style="display: flex; flex-direction: row;gap: 5dvw;">
-            <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
-            <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
-            <h4>Email: contato@empresa.com</h4>
+        <br>
+        <div style="display: flex; flex-direction: row; gap: 5dvw; text-align: center;">
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Endereço:</span><br> Rua Exemplo, 123, Cidade, País</h4>
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Telefone:</span><br> +55 (XX) XXXX-XXXX</h4>
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">E-mail:</span><br> contato@empresa.com</h4>
         </div>
+        <br>
     </footer>
 </body>
 <script>
     document.getElementById('compararForm').onsubmit = function() {
         // Exibe o spinner ao enviar o formulário
-        document.getElementById('spinner').style.display = 'block';
+        document.getElementById('spinner').style.visibility = 'visible';
     };
 </script>
 </html>

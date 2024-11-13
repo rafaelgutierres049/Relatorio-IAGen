@@ -1,6 +1,5 @@
 import yfinance as yf
 from datetime import datetime, timedelta
-import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,19 +14,6 @@ def obter_historico_semana(ticker: str):
     semana_passada = hoje - timedelta(weeks=1)  
 
     data_inicio = semana_passada.strftime('%Y-%m-%d')
-    data_fim = hoje.strftime('%Y-%m-%d')
-
-    ticker_yf = yf.Ticker(f"{ticker}.SA")
-    dados = ticker_yf.history(start=data_inicio, end=data_fim)
-
-    return dados
-
-def obter_historico_5_anos(ticker: str):
-    hoje = datetime.today()
-    
-    um_ano_atras = hoje - timedelta(days=1825)  
-
-    data_inicio = um_ano_atras.strftime('%Y-%m-%d')
     data_fim = hoje.strftime('%Y-%m-%d')
 
     ticker_yf = yf.Ticker(f"{ticker}.SA")

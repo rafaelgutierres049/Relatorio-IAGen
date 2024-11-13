@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório Financeiro</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .fundo{
+            background: linear-gradient(to bottom, black 1%, beige 50%);
+            width: 100%;
+        }
+        
+    </style>
+    
 </head>
 <body>
     <header id="cabecalho">
@@ -14,18 +22,31 @@
         <a href="{{ url_for('encontrar') }}">Encontrar</a>
     </header>
 
-    <div>
-        <div class="container centralizar" style="color:black; justify-content: center; text-align: center; margin-left: 6dvw; margin-right: 6dvw;">
+    <div style="background-color:beige" class="fundo">
+        <div class="container centralizar" style="color: black;justify-content: center; text-align: center; margin-left: 6dvw; margin-right: 6dvw;">
 
-            <h1>Geração de relatório de Ações</h1>
+            <div style="margin-bottom: 120px;">
+                <br><br><br>
+                <h1 style="color: white; font-weight: 500;">GERAÇÃO DE RELATÓRIO DE AÇÕES</h1>
+                <h3 style="font-weight: 500">
+                    Este é um sistema de análise financeira avançada, projetado para fornecer insights precisos sobre o mercado de ações.
+                    Ele processa dados em tempo real, oferecendo uma visão abrangente de cotações, indicadores financeiros e notícias.
+                    Com ferramentas de análise preditiva e recomendações automatizadas, atende tanto investidores experientes quanto iniciantes, 
+                    facilitando a tomada de decisões informadas e a identificação de oportunidades no mercado.
+                </h3>
+            </div>
             
-            <h3>Bem-vindo ao nosso sistema de análise financeira avançada, desenvolvido para oferecer insights detalhados e precisos sobre o mercado de ações. Este sistema foi projetado para atender tanto investidores experientes quanto aqueles que estão começando sua jornada no mundo dos investimentos</h3>
+
+            <div class="seta" onclick="proximaDiv()">
+                <img src="../static/imagens/seta1.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            
 
         </div>
 
-        <div class="container centralizar cards">
+        <div id="div_funcoes" class="container cards centralizar">
             <a href="relatorio" class="card_func centralizar">
-                <h1>Gerar</h1>
+                <h1  style="color: white; font-weight: 500;">GERAR</h1>
 
                 <div class="container centralizar">
                     <h3>Produzir análises financeiras detalhadas para ações específicas, com base em dados históricos e notícias recentes.</h3>
@@ -33,7 +54,7 @@
             </a>
 
             <a href="compara" class="card_func centralizar">
-                <h1>Comparar</h1>
+                <h1  style="color: white; font-weight: 500;">COMPARAR</h1>
 
                 <div class="container centralizar" >
                     <h3> Analisar ações lado a lado, facilitando a identificação de diferenças e semelhanças em seu desempenho e comportamento no mercado.</h3>
@@ -42,7 +63,7 @@
             </a>
 
             <a href="encontrar" class="card_func centralizar">
-                <h1>Encontrar</h1>
+                <h1  style="color: white; font-weight: 500;">ENCONTRAR</h1>
                 <div class="container centralizar">
                     
                     <h3>Analisar o cenário mundial atual e as notícias mais recentes para identificar a melhor ação para investimento à curto, médio e longo prazo.</h3>
@@ -55,14 +76,24 @@
 
 
         <footer class="centralizar">
-            <h3>Contato</h3><br>
-            <div style="display: flex; flex-direction: row;gap: 5dvw;">
-                <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
-                <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
-                <h4>Email: contato@empresa.com</h4>
+            <br>
+            <div style="display: flex; flex-direction: row; gap: 5dvw; text-align: center;">
+                <h4 style="font-weight: 500;"><span style="font-weight: 600;">Endereço:</span><br> Rua Exemplo, 123, Cidade, País</h4>
+                <h4 style="font-weight: 500;"><span style="font-weight: 600;">Telefone:</span><br> +55 (XX) XXXX-XXXX</h4>
+                <h4 style="font-weight: 500;"><span style="font-weight: 600;">E-mail:</span><br> contato@empresa.com</h4>
             </div>
+            <br>
         </footer>
         
     </div>
 </body>
+<script>
+    function proximaDiv() {
+    // Encontre o próximo elemento div após a classe "seta"
+    const nextDiv = document.getElementById('div_funcoes');
+    
+    // Role suavemente até esse próximo elemento
+    nextDiv.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 </html>

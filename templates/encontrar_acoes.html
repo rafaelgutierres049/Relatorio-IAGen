@@ -14,22 +14,26 @@
         <a href="{{ url_for('encontrar') }}">Encontrar</a>
     </header>
     
-    <div id="conteudo" style="color:black">
-        <h1>Relatório Gerado</h1>
+    <div id="conteudo" style="color:white">
+        <div class="conteudo centralizar" style="text-align: center;">
+            <h1>Relatório Gerado</h1>
+        </div>
+        
 
-        <div class="conteudo centralizar">
+        <div class="conteudo centralizar" style="background-color: beige; color: black; border-radius: 2rem;">
             <p id="relatorio-texto" style="margin-left: 3dvw; margin-right: 3dvw;font-weight: 500;">{{ encontrado }}</p>
         </div>
 
         
     </div>
     <footer class="centralizar">
-        <h3>Contato</h3><br>
-        <div style="display: flex; flex-direction: row;gap: 5dvw;">
-            <h4>Endereço: Rua Exemplo, 123, Cidade, País</h4>
-            <h4>Telefone: +55 (XX) XXXX-XXXX</h4>
-            <h4>Email: contato@empresa.com</h4>
+        <br>
+        <div style="display: flex; flex-direction: row; gap: 5dvw; text-align: center;">
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Endereço:</span><br> Rua Exemplo, 123, Cidade, País</h4>
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Telefone:</span><br> +55 (XX) XXXX-XXXX</h4>
+            <h4 style="font-weight: 500;"><span style="font-weight: 600;">E-mail:</span><br> contato@empresa.com</h4>
         </div>
+        <br>
     </footer>
     
 </body>
