@@ -8,10 +8,9 @@
     <style>
         .fundo_rel {
             position: relative;
-            background-image: url(../static/imagens/img_geracao.jpg);
+            background-image: url(../static/imagens/comparacao_ia.webp);
             background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
+            background-position: center;
             height: 100%;
             width: 100%;
         }
@@ -27,13 +26,6 @@
             background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%); /* Gradiente de preto para transparente */
             z-index: 1; /* Coloca o overlay acima da imagem, mas abaixo do conteúdo */
         }
-        
-        .caixa_form{
-            transition: all .3s ease-in;
-        }
-        .caixa_form:hover{
-            transform: scale(1.05);
-        }
 
     </style>
 </head>
@@ -48,15 +40,16 @@
     <div class="fundo_rel">
         <div id="conteudo" style="color:white">
             <div class="container centralizar" style="position: relative; z-index: 2;">
-                <form class="caixa_form" id="compararForm" action="{{ url_for('relatorio') }}" method="post">
+                <form class="caixa_form"  id="compararForm" action="{{ url_for('relatorio') }}" method="post">
                     <div class="centralizar" style="width: 100%; height: 100%; gap: 1rem;">
-                        <h2>Geração de relatório</h2>
+                        <h2>GERAÇÃO DE RELATÓRIO</h2>
                         <label for="ticker">Digite o Ticker da Ação:</label>
                         <input type="text" id="ticker" name="ticker" required>
                         <button type="submit">Gerar Relatório</button>
                         <div id="spinner"></div>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>

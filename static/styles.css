@@ -28,6 +28,7 @@ body{
     color: white;
     font-family: 'Montserrat';
     margin: auto;
+    animation: fadeIn 3s
 }
 a{
     text-decoration: none;
@@ -65,7 +66,6 @@ a{
     font-weight: 500;
     gap: 2dvh;
     width: 50%;
-    background-color: black;
     border-radius: 2dvw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -99,7 +99,7 @@ a{
     height: 84dvh;
     width: auto;
     margin: 3dvh 3dvh 3dvh 3dvh;
-    animation: fadeIn 3s;
+    
 }
 
 .container_3{
@@ -190,7 +190,10 @@ tr:hover {
     font-size: 1.5em;
     margin-top: 20px;
 }
-
+.imagem_relatorio{
+    width:60%;
+    height:80%;
+}
 .encontrar {
     background-color: #63adfd;
     padding:3dvh;
@@ -215,16 +218,20 @@ tr:hover {
     margin: 20px auto;
     position: relative;
 }
-.caixa_form{
-    transition: all .3s ease-in;
+.caixa_form {
+    transition: all 0.3s ease-in;
     height: 100%;
     width: 100%;
     border-radius: 2rem;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);  
+    backdrop-filter: blur(10px);
 }
-.caixa_form:hover{
-    transform: scale(1.05);
+.caixa_form:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a seção */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
 }
+
 .fundo{
     background: linear-gradient(to bottom, black 1%, beige 95%);
     width: 100%;
@@ -254,7 +261,7 @@ tr:hover {
         font-size: 15px;
     }
     .card_func{
-        background-color: #63adfd;
+        background-color: black;
         transition: all 0.3s ease;
         color:white;
         border-radius:2dvw;
@@ -277,6 +284,10 @@ tr:hover {
     }
     .font_encontrar{
         font-size: 10px;
+    }
+    .imagem_relatorio{
+        width:60%;
+        height:70%;
     }
 }
 
@@ -329,6 +340,10 @@ tr:hover {
     }
     .font_encontrar{
         font-size: 10px;
+    }
+    .imagem_relatorio{
+        width:80%;
+        height:50%;
     }
     
 }

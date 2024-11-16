@@ -8,7 +8,7 @@
     <style>
         .fundo_rel {
             position: relative;
-            background-image: url(../static/imagens/comparacao.jpg);
+            background-image: url(../static/imagens/comparacao_fundo.webp);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -28,16 +28,9 @@
             z-index: 1; /* Coloca o overlay acima da imagem, mas abaixo do conteúdo */
         }
         
-        .caixa_form{
-            transition: all .3s ease-in;
-        }
-        .caixa_form:hover{
-            transform: scale(1.05);
-        }
-        
     </style>
 </head>
-<body>
+<body style="animation: fadeIn 3s;">
     <header id="cabecalho">
         <a href="{{ url_for('home') }}">Home</a>
         <a href="{{ url_for('relatorio') }}">Gerar</a>
@@ -52,7 +45,7 @@
                 <form class="caixa_form" id="compararForm" action="{{ url_for('comparar') }}" method="post" style="height: 72%;">
                     
                     <div class="centralizar" style="width: 100%; height: 100%;gap: 1rem;padding: 1rem;">
-                        <h2>Comparar Ações</h2>
+                        <h2>COMPARAR AÇÕES</h2>
                             <label for="ticker1">Ticker da Ação 1:</label>
                             <input type="text" id="ticker1" name="ticker1" required>
     

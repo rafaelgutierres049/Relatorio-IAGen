@@ -153,5 +153,3 @@ def todas_acoes():
 
 
 
-
-

@@ -20,18 +20,18 @@
         </div>
         
 
-        <div class="conteudo centralizar">
+        <div class="conteudo centralizar" style="background-color: beige; color: black; border-radius: 2rem;">
             <p id="relatorio-texto" style="margin-left: 3dvw; margin-right: 3dvw;font-weight: 500;">{{ relatorio }}</p>
         </div>
 
         <div class="conteudo centralizar" style="width:100%; height: 80dvh;">
             <h2>Gráfico de Fechamento Anual</h2>
-            <img src="data:image/png;base64,{{ grafico_fechamento_ano_url }}" alt="Gráfico de Fechamento Anual" width="60%" height="80%">
+            <img class="imagem_relatorio" src="data:image/png;base64,{{ grafico_fechamento_ano_url }}" alt="Gráfico de Fechamento Anual" >
         </div>
 
         <div class="conteudo centralizar" style="width:100%; height: 80dvh;">
             <h2>Gráfico de Preço no último mês</h2>
-            <img src="data:image/png;base64,{{ grafico_preco_url }}" alt="Gráfico de Preço" width="60%" height="80%">
+            <img class="imagem_relatorio" src="data:image/png;base64,{{ grafico_preco_url }}" alt="Gráfico de Preço">
         </div>
     </div>
     <footer class="centralizar">
