@@ -28,7 +28,7 @@ Recomendações Personalizadas: Estratégias de investimento para diferentes per
 - Previsões de Mercado: Previsões sobre o desempenho das ações com base nas notícias e tendências do mercado.
 - Análise Comparativa: Comparação de ações dentro do mesmo setor com destaque para as vantagens competitivas.
   
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Python
 - HTML, CSS, JavaScript
 - Flask (para o servidor web)
@@ -37,7 +37,7 @@ Recomendações Personalizadas: Estratégias de investimento para diferentes per
 - BeautifulSoup (para web scraping das notícias financeiras)
 - reportlab (para gerar os PDFs dos relatórios)
 
-#Como Rodar o Projeto
+## Como Rodar o Projeto
 1. Clone este repositório:
 bash
 Copiar
@@ -65,7 +65,7 @@ Editar
 python app.py
 O sistema irá rodar em um servidor local e fornecer o endereço para você acessar a interface no seu navegador.
 
-Como Usar
+## Como Usar
 Após executar o sistema, abra o navegador e acesse o endereço local fornecido pelo servidor (geralmente http://127.0.0.1:5000).
 Escolha a funcionalidade que deseja utilizar:
 Geração de Relatórios de uma Empresa: Selecione a empresa e aguarde a geração do relatório.
