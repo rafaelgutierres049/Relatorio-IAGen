@@ -1,0 +1,14 @@
+matplotlib
+requests
+io
+base64
+aiohttp
+datetime
+flask
+reportlab
+tempfile
+yfinance
+bs4 
+asyncio
+pandas
+
