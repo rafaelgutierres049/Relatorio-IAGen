@@ -1,48 +1,73 @@
 Sistema de Geração de Relatórios utilizando IA Generativa
-
-Descrição
-Sistema que envia dados de ações buscadas no site da infomoney, assim como resultados de cálculos matemáticos utilizando esses dados para a API da OpenAI, que realiza previsões e comparações de acordo com notícias e dados históricos das ações listadas na B3.
+Este sistema foi desenvolvido para fornecer análises detalhadas e comparações de ações listadas na B3, com base em dados históricos e notícias do mercado. Utilizando IA Generativa, o sistema gera relatórios personalizados para investidores e compara o desempenho de diferentes ações, fornecendo recomendações e previsões de mercado.
 
 Funcionalidades
-- Geração de relatório de uma empresa específica:
-    Realiza as seguintes funções relacionadas a uma empresa que o usuário escolher: Análise de Impacto das Notícias, Resumo Diário, Análise Semanal,Recomendações, Previsões de Mercado, Análise Comparativa e gráficos.
+1. Geração de Relatório de uma Empresa Específica
+Análise de Impacto das Notícias
+Resumo Diário
+Análise Semanal
+Recomendações
+Previsões de Mercado
+Análise Comparativa
+Gráficos detalhados
+2. Comparação de Duas Empresas
+Comparação dos seguintes dados:
+Preço Atual
+P/L (Preço/Lucro)
+Dividend Yield
+Variação ao longo do mês
+Variação ao longo da semana
+Variação ao longo do ano
+A comparação é apresentada com cores para destacar qual empresa se sobressai em cada métrica.
+3. Geração de Relatório Diário
+O relatório gerado é estruturado em seções específicas, com análise detalhada e recomendações personalizadas:
 
-- Comparação de duas empresas:
-    Realiza a comparação dos dados de Preço Atual, P/L, Dividend Yield, Variação ao longo do mês, Variação ao longo da semana e Variação ao longo do ano de duas empresas. O sistema mostra para o usuário por meio de cores qual empresa se sobressai.
-
-- Greração de relatório diário:
-    O relatório segue uma estrutura predefinida, com seções específicas para análise e recomendações, e é personalizado com os dados fornecidos. As principais etapas e partes incluem:
-
-    Impacto das Notícias no Mercado: Avalia como as notícias fornecidas afetam as ações, considerando mudanças de preços e impacto econômico.
-
-    Recomendações Personalizadas por Perfil de Investimento: Fornece recomendações para investidores com diferentes horizontes de tempo (curto, médio e longo prazo), levando em conta a volatilidade das ações e o impacto das notícias. As sugestões incluem estratégias claras de compra, venda ou manutenção.
-
-    Previsões de Mercado: Faz previsões detalhadas para as ações analisadas, com base nas notícias e nas tendências do mercado.
-
-    Análise Comparativa: Compara as ações fornecidas com concorrentes do setor, destacando vantagens competitivas com base nas notícias e métricas financeiras.
-
+Impacto das Notícias no Mercado: Como as notícias afetam o preço das ações.
+Recomendações Personalizadas: Estratégias de investimento para diferentes perfis (curto, médio e longo prazo).
+Previsões de Mercado: Previsões sobre o desempenho das ações com base nas notícias e tendências do mercado.
+Análise Comparativa: Comparação de ações dentro do mesmo setor com destaque para as vantagens competitivas.
 Tecnologias Utilizadas
-Python, HTML, CSS, JavaScript, Flask
-
+Python
+HTML, CSS, JavaScript
+Flask (para o servidor web)
+OpenAI API (para análises e previsões geradas por IA)
+yfinance (para obter dados históricos de ações)
+BeautifulSoup (para web scraping das notícias financeiras)
 Como Rodar o Projeto
-- Clone este repositório:
-    https://github.com/rafaelgutierres049/Relatorio-IAGen
+1. Clone este repositório:
+bash
+Copiar
+Editar
+git clone https://github.com/rafaelgutierres049/Relatorio-IAGen
+2. Instale as dependências:
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+3. Obtenha uma chave de API do OpenAI:
+Acesse: https://openai.com/api
+Crie sua conta e gere sua chave de API.
+4. Substitua a chave de API no arquivo senha.py:
+No arquivo senha.py, substitua o valor da chave pela chave que você obteve do OpenAI:
 
-- Instale as dependências:
-    pip install -r requirements.txt
-
-- Obtenha uma chave de API do OpenAI
-    https://openai.com/api/
-    Substitua em senha.py a sua chave de API
-
-- Execute o sistema:
-    python app.py
+python
+Copiar
+Editar
+api_key = 'sua_chave_api_aqui'
+5. Execute o sistema:
+bash
+Copiar
+Editar
+python app.py
+O sistema irá rodar em um servidor local e fornecer o endereço para você acessar a interface no seu navegador.
 
 Como Usar
-- Após executar o sistema, acesse o endereço local fornecido pelo servidor para acessar a interface do sistema.
-- Selecione a funcionalidade que deseja utilizar
-- No caso de ser uma relacionada a geração de PDFs, aguarde 1 minuto para que o sistema gere o relatório
-- No caso de ser a comparação de empresa, deverá entrar com o Ticker de duas ações que deseja fazer a comparação
+Após executar o sistema, abra o navegador e acesse o endereço local fornecido pelo servidor (geralmente http://127.0.0.1:5000).
+Escolha a funcionalidade que deseja utilizar:
+Geração de Relatórios de uma Empresa: Selecione a empresa e aguarde a geração do relatório.
+Comparação de Empresas: Insira o ticker de duas ações para gerar a comparação entre elas.
+Se estiver gerando um relatório de PDF, aguarde cerca de 1 minuto para que o sistema finalize o processo e forneça o arquivo para download.
+Contribuindo
+Sinta-se à vontade para contribuir com melhorias ou correções no projeto. Para isso, basta seguir os passos abaixo:
 
-Criado por [Rafael Ponte Gutierres](https://github.com/rafaelgutierres049).
-
+Criado por: Rafael Ponte Gutierres
