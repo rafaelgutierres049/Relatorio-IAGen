@@ -43,3 +43,6 @@ Como Usar
 - Selecione a funcionalidade que deseja utilizar
 - No caso de ser uma relacionada a geração de PDFs, aguarde 1 minuto para que o sistema gere o relatório
 - No caso de ser a comparação de empresa, deverá entrar com o Ticker de duas ações que deseja fazer a comparação
+
+Criado por [Rafael Ponte Gutierres](https://github.com/rafaelgutierres049).
+
