@@ -31,6 +31,10 @@ Como Rodar o Projeto
 - Instale as dependências:
     pip install -r requirements.txt
 
+- Obtenha uma chave de API do OpenAI
+    https://openai.com/api/
+    Substitua em senha.py a sua chave de API
+
 - Execute o sistema:
     python app.py
 
