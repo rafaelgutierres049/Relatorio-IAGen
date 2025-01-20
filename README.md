@@ -2,6 +2,7 @@
 Este sistema foi desenvolvido para fornecer análises detalhadas e comparações de ações listadas na B3, com base em dados históricos e notícias do mercado. Utilizando IA Generativa, o sistema gera relatórios personalizados para investidores e compara o desempenho de diferentes ações, fornecendo recomendações e previsões de mercado.
 
 ## Funcionalidades
+1. Geração de relatório de empresa específica
 - Geração de Relatório de uma Empresa Específica
 - Análise de Impacto das Notícias
 - Resumo Diário
