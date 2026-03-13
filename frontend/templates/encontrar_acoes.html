@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Ações</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="/">Home</a>
+        <a href="/relatorio">Gerar</a>
+        <a href="/compara">Comparar</a>
+        <a href="/encontrar">Encontrar</a>
+    </header>
+
+    <div id="conteudo" style="color:white">
+        <div class="conteudo centralizar" style="text-align: center;">
+            <h1>Melhores Oportunidades de Investimento</h1>
+        </div>
+
+        {% if encontrado %}
+            <div class="secao">
+                <div class="secao-titulo">Impacto das Notícias no Mercado</div>
+                <p>{{ encontrado.impacto_noticias }}</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-titulo">Recomendações — Curto Prazo</div>
+                <p>{{ encontrado.recomendacoes_curto_prazo }}</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-titulo">Recomendações — Médio Prazo</div>
+                <p>{{ encontrado.recomendacoes_medio_prazo }}</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-titulo">Recomendações — Longo Prazo</div>
+                <p>{{ encontrado.recomendacoes_longo_prazo }}</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-titulo">Previsões de Mercado</div>
+                <p>{{ encontrado.previsoes_mercado }}</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-titulo">Análise Comparativa</div>
+                <p>{{ encontrado.analise_comparativa }}</p>
+            </div>
+        {% else %}
+            <div class="secao" style="text-align: center;">
+                <p>Nenhuma análise disponível no momento.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer class="centralizar">
+        <div class="footer-grid">
+            <p><span>Endereço</span>Rua Exemplo, 123, Cidade, País</p>
+            <p><span>Telefone</span>+55 (XX) XXXX-XXXX</p>
+            <p><span>E-mail</span>contato@empresa.com</p>
+        </div>
+    </footer>
+</body>
+</html>

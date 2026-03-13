@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Financeiro - {{ ticker.upper() }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="/">Home</a>
+        <a href="/relatorio">Gerar</a>
+        <a href="/compara">Comparar</a>
+        <a href="/encontrar">Encontrar</a>
+    </header>
+
+    <div id="conteudo" style="color:white">
+        <div class="conteudo centralizar" style="text-align: center;">
+            <h1>Relatório — {{ ticker.upper() }}</h1>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Introdução</div>
+            <p>{{ relatorio.introducao }}</p>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Análise de Impacto das Notícias</div>
+            <p>{{ relatorio.analise_impacto_noticias }}</p>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Resumo Diário</div>
+            <p>{{ relatorio.resumo_diario }}</p>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Análise Semanal</div>
+            <p>{{ relatorio.analise_semanal }}</p>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Recomendações</div>
+            <p>{{ relatorio.recomendacoes }}</p>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Previsões de Mercado</div>
+            <p>{{ relatorio.previsoes_mercado }}</p>
+        </div>
+
+        <div class="secao">
+            <div class="secao-titulo">Análise Comparativa</div>
+            <p>{{ relatorio.analise_comparativa }}</p>
+        </div>
+
+        <div class="conteudo" style="padding: 1.5rem 3dvw 0;">
+            <h2 style="color: white; margin-bottom: 0.75rem;">Histórico Anual</h2>
+            <div style="width:100%;">
+                {{ grafico_fechamento_ano_html | safe }}
+            </div>
+        </div>
+
+        <div class="conteudo" style="padding: 1.5rem 3dvw 3rem;">
+            <h2 style="color: white; margin-bottom: 0.75rem;">Preço no Último Mês</h2>
+            <div style="width:100%;">
+                {{ grafico_preco_html | safe }}
+            </div>
+        </div>
+    </div>
+
+    <footer class="centralizar">
+        <div class="footer-grid">
+            <p><span>Endereço</span>Rua Exemplo, 123, Cidade, País</p>
+            <p><span>Telefone</span>+55 (XX) XXXX-XXXX</p>
+            <p><span>E-mail</span>contato@empresa.com</p>
+        </div>
+    </footer>
+</body>
+</html>

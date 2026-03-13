@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Ações: {{ ticker1 }} - {{ ticker2 }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="/">Home</a>
+        <a href="/relatorio">Gerar</a>
+        <a href="/compara">Comparar</a>
+        <a href="/encontrar">Encontrar</a>
+    </header>
+    <div id="conteudo" style="color:white;">
+            <div class="container centralizar">
+                <h1>Comparação entre {{ ticker1 }} e {{ ticker2 }}</h1>
+                <h2>Resumo Comparativo - {{ data_hoje }}</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Métrica</th>
+                            <th>{{ ticker1 }}</th>
+                            <th>{{ ticker2 }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Preço Atual</td>
+                            <td id="preco-ticker1">{{ comparacao['Preço Atual'][ticker1] }}</td>
+                            <td id="preco-ticker2">{{ comparacao['Preço Atual'][ticker2] }}</td>
+                        </tr>
+                        <tr>
+                            <td>P/L</td>
+                            <td id="pl-ticker1">{{ comparacao['P/L'][ticker1] }}</td>
+                            <td id="pl-ticker2">{{ comparacao['P/L'][ticker2] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Dividend Yield</td>
+                            <td id="dividend-ticker1">{{ comparacao['Dividend Yield'][ticker1] }}</td>
+                            <td id="dividend-ticker2">{{ comparacao['Dividend Yield'][ticker2] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Variação ao longo da semana (%)</td>
+                            <td id="variacao-semana-ticker1">{{ comparacao['Variação ao longo da semana (%)'][ticker1] }}</td>
+                            <td id="variacao-semana-ticker2">{{ comparacao['Variação ao longo da semana (%)'][ticker2] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Variação ao longo do mês (%)</td>
+                            <td id="variacao-mes-ticker1">{{ comparacao['Variação ao longo do mês (%)'][ticker1] }}</td>
+                            <td id="variacao-mes-ticker2">{{ comparacao['Variação ao longo do mês (%)'][ticker2] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Variação ao longo do ano (%)</td>
+                            <td id="variacao-ano-ticker1">{{ comparacao['Variação ao longo do ano (%)'][ticker1] }}</td>
+                            <td id="variacao-ano-ticker2">{{ comparacao['Variação ao longo do ano (%)'][ticker2] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="centralizar">
+        <div class="footer-grid">
+            <p><span>Endereço</span>Rua Exemplo, 123, Cidade, País</p>
+            <p><span>Telefone</span>+55 (XX) XXXX-XXXX</p>
+            <p><span>E-mail</span>contato@empresa.com</p>
+        </div>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+</html>

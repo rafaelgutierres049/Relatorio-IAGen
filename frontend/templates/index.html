@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Financeiro</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="/">Home</a>
+        <a href="/relatorio">Gerar</a>
+        <a href="/compara">Comparar</a>
+        <a href="/encontrar">Encontrar</a>
+    </header>
+
+    <section class="hero centralizar">
+        <p style="color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin: 0;">
+            Análise com Inteligência Artificial
+        </p>
+        <h1 class="hero-title">
+            Relatórios financeiros<br><span class="accent">precisos e automatizados</span>
+        </h1>
+        <p class="hero-desc">
+            Processa dados em tempo real, notícias do mercado e indicadores financeiros para entregar
+            análises detalhadas, comparações e recomendações de investimento.
+        </p>
+        <div class="seta" onclick="document.getElementById('funcoes').scrollIntoView({behavior:'smooth'})">
+            <img src="/static/imagens/seta1.png" alt="Ver funcionalidades" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+    </section>
+
+    <section id="funcoes" class="cards-section centralizar">
+        <div class="cards centralizar" style="width: 100%;">
+            <a href="/relatorio" class="card_func centralizar">
+                <h2>Gerar</h2>
+                <p>Relatório completo com análise fundamentalista, impacto de notícias, gráficos históricos e recomendação de compra ou venda.</p>
+            </a>
+            <a href="/compara" class="card_func centralizar">
+                <h2>Comparar</h2>
+                <p>Comparação lado a lado de duas ações com métricas como P/L, Dividend Yield e variações de preço por período.</p>
+            </a>
+            <a href="/encontrar" class="card_func centralizar">
+                <h2>Encontrar</h2>
+                <p>Identifica as melhores oportunidades do mercado analisando o cenário global para recomendações de curto, médio e longo prazo.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="centralizar">
+        <div class="footer-grid">
+            <p><span>Endereço</span>Rua Exemplo, 123, Cidade, País</p>
+            <p><span>Telefone</span>+55 (XX) XXXX-XXXX</p>
+            <p><span>E-mail</span>contato@empresa.com</p>
+        </div>
+    </footer>
+</body>
+</html>

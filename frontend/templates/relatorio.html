@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório Financeiro</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
     <style>
         .fundo_rel {
             position: relative;
-            background-image: url(../static/imagens/comparacao_ia.webp);
+            background-image: url(/static/imagens/comparacao_ia.webp);
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -23,24 +23,24 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%); /* Gradiente de preto para transparente */
-            z-index: 1; /* Coloca o overlay acima da imagem, mas abaixo do conteúdo */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%);
+            z-index: 1;
         }
 
     </style>
 </head>
 <body>
     <header id="cabecalho">
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('relatorio') }}">Gerar</a>
-        <a href="{{ url_for('comparar') }}">Comparar</a>
-        <a href="{{ url_for('encontrar') }}">Encontrar</a>
+        <a href="/">Home</a>
+        <a href="/relatorio">Gerar</a>
+        <a href="/compara">Comparar</a>
+        <a href="/encontrar">Encontrar</a>
     </header>
 
     <div class="fundo_rel">
         <div id="conteudo" style="color:white">
             <div class="container centralizar" style="position: relative; z-index: 2;">
-                <form class="caixa_form"  id="compararForm" action="{{ url_for('relatorio') }}" method="post">
+                <form class="caixa_form"  id="compararForm" action="/relatorio" method="post">
                     <div class="centralizar" style="width: 100%; height: 100%; gap: 1rem;">
                         <h2>GERAÇÃO DE RELATÓRIO</h2>
                         <label for="ticker">Digite o Ticker da Ação:</label>
@@ -49,27 +49,23 @@
                         <div id="spinner"></div>
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </div>
 
     <footer class="centralizar">
-        <br>
-        <div style="display: flex; flex-direction: row; gap: 5dvw; text-align: center;">
-            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Endereço:</span><br> Rua Exemplo, 123, Cidade, País</h4>
-            <h4 style="font-weight: 500;"><span style="font-weight: 600;">Telefone:</span><br> +55 (XX) XXXX-XXXX</h4>
-            <h4 style="font-weight: 500;"><span style="font-weight: 600;">E-mail:</span><br> contato@empresa.com</h4>
+        <div class="footer-grid">
+            <p><span>Endereço</span>Rua Exemplo, 123, Cidade, País</p>
+            <p><span>Telefone</span>+55 (XX) XXXX-XXXX</p>
+            <p><span>E-mail</span>contato@empresa.com</p>
         </div>
-        <br>
     </footer>
 
 </body>
 <script>
     document.getElementById('compararForm').onsubmit = function() {
-        // Exibe o overlay e o spinner ao enviar o formulário
         document.getElementById('spinner').style.visibility = 'visible';
-        document.getElementById('mensagem').style.display = 'block';
     };
 </script>
 </html>

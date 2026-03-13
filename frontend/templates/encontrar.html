@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Ações</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="/">Home</a>
+        <a href="/relatorio">Gerar</a>
+        <a href="/compara">Comparar</a>
+        <a href="/encontrar">Encontrar</a>
+    </header>
+
+    <section class="hero centralizar" style="gap: 1.5rem;">
+        <p style="color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin: 0;">
+            Recomendação Diária
+        </p>
+        <h1 class="hero-title">Melhores oportunidades<br><span class="accent">de investimento</span></h1>
+        <p class="hero-desc" style="max-width: 580px;">
+            Análise do cenário global e das notícias mais recentes para identificar
+            as melhores ações no curto, médio e longo prazo.
+        </p>
+        <a id="btn_encontrar" class="encontrar" href="/encontrar/acoes">Gerar Relatório</a>
+        <div id="spinner"></div>
+    </section>
+
+    <footer class="centralizar">
+        <div class="footer-grid">
+            <p><span>Endereço</span>Rua Exemplo, 123, Cidade, País</p>
+            <p><span>Telefone</span>+55 (XX) XXXX-XXXX</p>
+            <p><span>E-mail</span>contato@empresa.com</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('btn_encontrar').addEventListener('click', function() {
+                document.getElementById('spinner').style.visibility = 'visible';
+            });
+        });
+    </script>
+</body>
+</html>
