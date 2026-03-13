@@ -2,7 +2,7 @@
 
 > Plataforma web para análise e geração de relatórios financeiros de ações da B3, com inteligência artificial generativa.
 
-[![CI](https://github.com/rafaelgutierres049/Relatorio-IAGen/actions/workflows/ci.yml/badge.svg)](https://github.com/rafaelgutierres049/Relatorio-IAGen/actions/workflows/ci.yml)
+[![CI](https://github.com/rafaelgutierres049/Relatorio-IAGen/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/rafaelgutierres049/Relatorio-IAGen/actions/workflows/ci.yml)
 
 ---
 
